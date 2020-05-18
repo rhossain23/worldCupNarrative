@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>The "Europeanization" of the World Cup</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>The "Europeanization" of the World Cup</h1>
+      <h2>By Rafayet Hossain</h2>
+    </header>
+    <img src="trophyball.png" class="trophyBall" alt="The trophy and the official matchball" />
+    <figcaption class="trophyBallCaption">The trophy and the official matchball of the 2018 World Cup. Image Source: <a href="https://www.fifa.com/worldcup/news/2018-fifa-world-cuptm-official-match-ball-unveiled-an-exciting-re-imag-2919272">FIFA</a></figcaption>
+    <div>
+        <div class='section' id='one'>
+          <div class='text'>
+            The FIFA World Cup is one of the biggest events in all of sports. Countries from all across the globe send its top players to compete in the tournament in order to be known as the best in the world. There are many competitions in professional soccer, but none of them are as prestigious as the World Cup. One possible reason for this is that the World Cup is held once every four years. Professional soccer players start playing at the highest level at around 18 years old nowadays and start slowing down in their early 30s. This means that most players are able to play in three or four World Cups maximum during their professional careers. There have been 21 World Cups so far, with the first occuring in 1930 and the most recent occuring in 2018. At the first World Cup, there were only 13 teams, but FIFA, the highest governing body of professional soccer, has constantly expanded the competition by trying to incorporate more countries from around the world. However, no matter what FIFA does, it seems like Europe has been the most represented continent in the competition over the years. Furthermore, it also seems like players that play their professional soccer in European countries also appear the most in the competition.
+          </div>
+        </div>
+        <div class='section' id='two'>
+          <div class='text'>
+            What does playing professional soccer in Europe mean? Soccer players play for both a "national" team and a "club" team. National teams represent a country in international tournaments, such as the World Cup. Club teams, on the other hand, represent a city or a region within a country. These teams play within its country’s leagues, such as England’s Premier League or the United States’ Major League Soccer. For example, Lionel Messi’s club team is Futbol Club Barcelona, which plays in La Liga, the top Spanish professional league, and his national team is the Argentina National Football Team. Most countries have multiple leagues and club teams have its own tournaments as well.
+            <br>
+            <br>
+            Soccer players primarily play their professional soccer for their club teams throughout a league season. In Europe, most leagues start in August of one year and end in May of the following year, which is referred to as a season. There is at least one game played per week, but there are months in which some of the top teams have to play two or even three games per week. Each country has its own governing body for its leagues, such as the Italian Football Federation in Italy or the German Football Association in Germany. Moreover, each country’s professional soccer is also subject to FIFA’s governing bodies, referred to as confederations, for soccer in the continent that they are located in. These include CONCACAF for North and Central America, CONMEBOL for South America, UEFA for Europe, CAF for Africa, AFC for Asia, and OFC for Oceania. 
+          </div>
+          <div class='messi'> 
+            <img src="messi.png" class="messi" alt="Lionel Messi" />
+            <figcaption class="messiCaption">Left: Lionel Messi wearing his FC Barcelona uniform. Image Source: <a href="https://www.britannica.com/biography/Lionel-Messi">Encyclopaedia Britannica</a><br>Right: Lionel Messi wearing his Argentina uniform. Image Source: <a href="https://www.soccer.ru/galery/1055457/photo/733494">Soccer.ru</a>
+            </figcaption>
+          </div>
+        </div>
+        <div class='section' id='three'>
+          <div class='text'>
+          All of this may sound confusing so think of it like this: FIFA is the main governing body, all of the confederations answer to FIFA, and every individual country's governing body answers to its confederation: FIFA > confederation > individual country’s governing body. 
+            <br>
+            <br>
+            Let us now look at all of the national teams that have played at the World Cup over the years:
+            <br>
+            <br>
+            *All World Cup data obtained from <a href="https://www.fifa.com">FIFA</a>.
+            <br>
+            <br>
+            *Hovering over each circle displays the name of the national team/country.
+          </div>
+        </div>
+      <input type="range" step="4" class = "slider1" id="year1">
+      <p class="slider1value">Year: <span id="value1"></span></p>
+      <div class="graph" id="d3-container1"></div>
+        <div class='section' id='four'>
+          <div class='text'>
+            First things first, there is no data for 1942 or 1946. Why? The World Cup did not occur in either of those years due to World War II. Aside from that, this map shows that Europe has always been the most represented continent at the World Cup, except for in 1930, which was the very first World Cup. In this tournament, there were four national teams representing European countries and seven national teams representing South American countries. However, Europe has boasted the most national teams in the World Cup in every tournament since then.
+            <br>
+            <br>
+            Now that we have seen all of the national teams that have played at the World Cup, let us now look at all of the countries in which players at the World Cup play their club soccer: 
+            <br>
+            <br>
+            *Both the following map and the bar graph use and show the same data, just represented differently.
+            <br>
+            <br>
+            *Colors between the map and the graph do not correlate.  
+            <br>
+            <br>
+            *Hovering over each circle on the map and each bar on the graph displays more information: 
+            <br>
+            <p style="margin-left: 20px">- The name of the country.</p>
+            <p style="margin-left: 20px">- The total number of players at the World Cup that play their club soccer in this country.</p>
+            <p style="margin-left: 20px">- The percent of all players at the World Cup that play their club soccer in this country.</p> 
+            <br>
+            </div>
+        </div>
+        <input type="range" step="4" class = "slider2" id="year2">
+        <p class="slider2value">Year: <span id="value2"></span></p>
+        <div class='graph' id="d3-container2"> </div>
+        <br>
+        <input type="range" step="4" class = "slider3" id="year3">
+        <p class="slider3value">Year: <span id="value3"></span></p>
+        <div class='graph' id="d3-container3"> </div>
+        <div class='section' id='five'>
+          <div class='text'>
+            The map and the graph both show a number of things. First of all, in the early years of the World Cup, most players played their club soccer in the same country that they represented at the tournament. Brazilian national team members played in Brazilian clubs, Mexican national team members played in Mexican clubs, and so on. Over time, as the tournament was expanded to include more teams and players, both the map and the graph show that European countries began to display more player representation in the World Cup than other countries. The beginning of this trend is seen most clearly in the 1982 edition of the competition, as the data shows that many players from non-European countries first began to play for European clubs around this time. Fast forward to the most recent World Cup in 2018, and we see that, while there are countries from all over the world, the majority of players played their club soccer in European countries. For example, 129 players played for English clubs, which accounted for 17.53% of the total number of players at the tournament. In contrast, back in 1982, 50 players played in English clubs, which accounted for 9.51% of the total number of players at the tournament.
+            <br>
+            <br>
+            Let us now look more closely at the movement of players over the years: 
+            <br>
+            <br>
+            *Hovering over each circle shows the year and number of players.
+          </div>
+        </div>
+        <div class="graph" id="d3-container4"></div>
+        <svg id="legend" width="100%" height="50px">
+          <rect class="rect1" width="20" height="20" x="50"/>
+          <text class="text" x="80" y="15">Players in non-European countries that play in their own country</text>
+          <rect class="rect2" width="20" height="20" x="50" y="30"/>
+          <text class="text" x="80" y="45">Players in non-European countries that play in Europe</text>
+          <rect class="rect3" width="20" height="20" x="52.5%"/>
+          <text class="text" x="55%" y="15">Players in European countries that play in their own country</text>
+          <rect class="rect4" width="20" height="20" x="52.5%" y="30"/>
+          <text class="text" x="55%" y="45">Players in European countries that play in other European countries</text>
+        </svg>
+          <div class='section' id='six'>
+            <div class='text'>
+             The red line shows that the aforementioned trend of players from non-European countries playing their club soccer in Europe did indeed begin around 1982. The blue line shows that the number of players from non-European countries that played in their own country began decreasing around 1998. Player movement within Europe was also added for comparison. The green line shows that the number of players from European countries that played in their own country began steadily decreasing around 1982. The purple line shows that the number of players form European countries that played in other European countries began steadily increasing around 1962. However, this value did drop between 2002 and 2014, but was very high once again in 2018. Also, when compared to all of the other lines, the red line indicates that the majority of the players at the World Cups that took place in 2006, 2010, 2014, and 2018 were from non-European countries that played their club soccer in European countries.
+              <br>
+              <br>
+              By now, you are probably wondering why this trend is occurring. One possible reason for this is money. The following map shows the richest clubs in the world for every year from 2002 to 2020 according to the <a href="https://www2.deloitte.com/uk/en/pages/sports-business-group/articles/deloitte-football-money-league.html">Deloitte Football Money League</a>:
+              <br>
+              <br>
+              *Hovering over each circle shows the name of the club, their ranking amongst the richest clubs, their revenue, and the country they are located in.
+              <br>
+              <br>
+              *Nowadays, Deloitte lists the top 30 richest clubs. In previous years, it listed the top 20 and the top 10. This accounts for the decrease in the number of circles as you go back in time.
+              <br>
+              <br>
+              *Each year value refers to the club’s finances during the previous league season. For example, "2020" refers to the 2018-2019 league season. Remember, most league seasons in Europe start in August of one year and end in May of the next year.
+          </div>
+        </div>
+        <input type="range" class = "slider4" id="year4">
+        <p class="slider4value">Year: <span id="value4"></span></p>
+        <div class="graph" id="d3-container5"></div>
+        <div class='section' id='seven'>
+          <div class='text'>
+            As this map shows, the richest clubs are almost always located in Europe. The only non-European club to make the Deloitte Football Money League in the last 20 years was Brazilian club Corinthians in 2014. If a club makes more money, they can afford to sign higher quality players, as the better the player, the more expensive it is to sign them to a contract. As mentioned before, since the World Cup is such a prestigious tournament, countries send their best players in order to increase their chances of winning. So if all of the best players in the world are playing in Europe because they are under contract with these rich clubs, it stands to reason that this trend of non-European players playing in Europe rather than their own countries can be tied to monetary reasons. Another interesting note about this map is that a number of clubs have greatly increased their finances over the years. For example, Futbol Club Barcelona’s revenue in 2007 was 279.8 million dollars and they were the second richest club in the world. Fast forward to 2019 and Barcelona’s revenue was 745.6 million dollars and they were again the second richest club in the world. In other words, the rich get richer.
+          </div>
+        </div>
+        <div class='section' id='eight'>
+          <div class='text'>
+            After examining all of the maps and graphs above, it turns out that, even though the tournament is called the World Cup, Europe has actually had the most national teams represented in the competition. Furthermore, players that play their professional soccer in European countries do actually appear in the World Cup more than other players. Moreover, one possible reason for these trends is the astronomical amount of revenue that European clubs generate. After all, playing soccer professionally is still a career, and one that usually lasts less than 20 years. Therefore, players are justified in trying to make as much money as they can before they have to retire, and so they will aim to play wherever they can make the most money, which happens to be in Europe. FIFA also has plans to expand future World Cups to 48 teams, which would allow for even more players to be featured in the competition. It will be interesting to see how what happens to these trends in future incarnations of the tournament.
+        </div>
+      <script src="d3.js"></script>
+      <script src="main.js" type="module"></script>
+    </body>
+  </html>
